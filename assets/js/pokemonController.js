@@ -73,7 +73,7 @@ app.controller('pokemonController', ['$scope','$http','apiService', function ($s
    
 
     function atualizarTela() {
-       debugger
+       
         apiService.buscarLista($scope.dados, function(dados) {
             $scope.pokemons = dados.data.data;
             $scope.listaPokemon = $scope.pokemons.results
