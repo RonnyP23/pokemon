@@ -65,6 +65,7 @@ app.service('apiService', ['$http' ,function ($http){
     }
 }])
 
+
 app.controller('pokemonController', ['$scope','$http','apiService', function ($scope, $http, apiService){
     $scope.nome = "Ronny paulo";
     $scope.nomePokemon = '';
@@ -143,9 +144,15 @@ app.controller('pokemonController', ['$scope','$http','apiService', function ($s
         }
         if(param =='anterior') {
             $scope.nav($scope.pokemons.previous);
+            if($scope.pokemons.previous != null) {
+                $scope.paginaInicial--
+            }
         }
         if(param =='proxima') {
             $scope.nav($scope.pokemons.next);
+            if($scope.pokemons.next != null) {
+                $scope.paginaInicial++
+            }
         }
         if(param =='ultima') {
             
@@ -160,4 +167,17 @@ app.controller('pokemonController', ['$scope','$http','apiService', function ($s
        
     }
 } ])
+
+app.directive('ngEnter', function () {  
+    return function (scope, element, attrs) {  
+      element.bind("keydown keypress", function (event) {  
+        if(event.which === 13) {  
+          scope.$apply(function (){  
+            scope.$eval(attrs.ngEnter);  
+          });  
+          event.preventDefault();  
+        }  
+      });  
+    };  
+});  
 
