@@ -48,9 +48,9 @@
             </div>
         </div>
         <hr>
-        <span style="color:#000000;">Exibindo {{dados.proximo}} de {{dados.limit}} itens</span>
+        <span style="color:#000000;">Exibindo {{dados.limit}} de {{totalLista}} itens</span>
         
-        <div class="paginacao" ng-repeat="p in listaPokemon">
+        <div class="conteudo-pokemon" ng-repeat="p in listaPokemon">
             <div class="imagem">
                 <img src="./assets/image 1.png">
             </div>
@@ -62,7 +62,7 @@
                     </span>
                 </div>
                 <div>
-                    <p>
+                    <p style="margin-top: 20px;">
                         Características do pokemon dolor sit amet, consectetur adipiscing elit. In ultricies nunc at
                         odio
                         tempor tincidunt. Sed sit amet dolor velit. Donec convallis tellus ut porta molestie.
@@ -78,7 +78,10 @@
 
 
     </section>
-    <section style="display: flex; justify-content: center;">
+    <section class="paginacao" ">
+        <span>
+            {{paginaInicial}} de {{paginaFinal | number:0}} páginas
+        </span>
         <nav aria-label="Page navigation example">
             <ul class="pagination">
                 <li class="page-item">

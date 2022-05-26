@@ -81,14 +81,14 @@
     border: 1px solid #ced4da;
 }
 
-.paginacao {
+.conteudo-pokemon {
     border-top: 1px solid #BDBDBD;
     border-bottom: 1px solid #BDBDBD;
     display: flex;
     flex-direction: row;
     
 }
-.paginacao span {
+.conteudo-pokemon span {
     font-family: 'Circular Std';
     font-style: normal;
     font-weight: 700;
@@ -97,32 +97,38 @@
 }
 
 @media screen and (max-width: 615px){
-    .paginacao {
+    .conteudo-pokemon {
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         margin: 0 auto;
         padding: 15px;
         width: 214px;
-        height: 210px;
+        
     
-    }
-    .texto {
-        width:500px ;
-        margin-right: -10px;
-        margin-top: 17px;
     }
 }
 
 .imagem {
     display: flex;
     flex-direction: row;
-    padding: 15px;
+    padding-right: 15px;
 }
 
 .imagem img {
     width: 98px;
     height: 96px;
-    margin-top: 27px;
+    margin-top: 17px;
+    border: 1px solid #565656;
+    border-radius: 10px;
+}
+
+@media screen and (max-Width:615px) {
+    .imagem img {
+        width: 214px;
+        height: 210px;
+        
+    }
 }
 
 
@@ -130,7 +136,17 @@
 .texto {
     display: flex;
     flex-direction: column;
-    margin-top: 17px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width:615px) {
+    .texto p {
+        display: flex;
+        flex-direction: column;
+        margin-top: 17px;
+        width: 400px;
+        margin-left: -98px;
+    }
 }
 
 .imagem span {
@@ -138,6 +154,21 @@
    
 }
 
+.page-link {
+    border: none;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.paginacao {
+    display: flex; 
+    justify-content: end;
+}
+@media screen and (max-width:615px) {
+    .paginacao {
+        display: flex; 
+        justify-content:center;
+    }
+}
 
 
 

@@ -61,9 +61,11 @@ app.service('apiService', ['$http' ,function ($http){
 app.controller('pokemonController', ['$scope','$http','apiService', function ($scope, $http, apiService){
     $scope.nome = "Ronny paulo";
     $scope.buscar = '';
-    $scope.img = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png'
-     $scope.listaPokemon = []
-     $scope.pokemons = [];
+    $scope.totalLista = 0;
+    $scope.paginaInicial = 0;
+    $scope.paginFinal = 0;
+    $scope.listaPokemon = []
+    $scope.pokemons = [];
 
     $scope.dados = {
         offset: 0 ,
@@ -77,6 +79,9 @@ app.controller('pokemonController', ['$scope','$http','apiService', function ($s
         apiService.buscarLista($scope.dados, function(dados) {
             $scope.pokemons = dados.data.data;
             $scope.listaPokemon = $scope.pokemons.results
+            $scope.totalLista = $scope.pokemons.count
+            $scope.paginaInicial = 1
+            $scope.paginaFinal = $scope.totalLista / $scope.dados.limit
             console.log($scope.pokemons)
             console.log()
 
