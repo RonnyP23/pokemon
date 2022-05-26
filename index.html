@@ -38,10 +38,10 @@
                 <span class="subtitulo" style="color: #000000;"> Subtitulo da descrição </span>
             </div>
             <div class="input-group flex-nowrap pesquisa">
-                <input type="text" class="form-control buscar" placeholder="Buscar" aria-label="Buscar" 
+                <input type="text" ng-model="nomePokemon" class="form-control buscar" placeholder="Buscar" aria-label="Buscar"  ng-enter="buscar()" 
                     aria-describedby="addon-wrapping" style="width: 257px;">
                 <span class="input-group-text search" id="addon-wrapping">
-                    <spam type="button" class="material-symbols-outlined" >
+                    <spam type="button" class="material-symbols-outlined" ng-click="buscar()" >
                         search
                     </spam>
                 </span>
@@ -52,7 +52,8 @@
         
         <div class="conteudo-pokemon" ng-repeat="p in listaPokemon">
             <div class="imagem">
-                <img src="./assets/image 1.png">
+                <img src="./assets/image 1.png" ng-if="!p.image">
+                <img src="{{p.image}}" ng-if="p.image">
             </div>
 
             <div class="texto">
@@ -78,9 +79,9 @@
 
 
     </section>
-    <section class="paginacao" ">
+    <section class="paginacao">
         <span>
-            {{paginaInicial}} de {{paginaFinal | number:0}} páginas
+            {{paginaInicial | number:0}} de {{paginaFinal | number:0}} páginas
         </span>
         <nav aria-label="Page navigation example">
             <ul class="pagination">
