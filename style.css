@@ -1,0 +1,142 @@
+.container-fluid{
+    display: flex;
+    flex-direction: row;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    color:#FFFFFF;
+    margin-top: 10px;
+    padding-right: 21px;
+}
+
+.header img {
+    width: 12px; 
+    height: 12px;
+    margin-top: 11px;
+    margin-left: 10px;
+}
+
+.header p {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 21px;
+}
+
+.content {
+    padding: 18px;
+    
+    background-color: #F4F4F4;
+}
+
+
+
+.topo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@media screen and (max-width:615px) {
+    .topo {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.conteudo-dir{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+}
+
+.subtitulo {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 44px;
+}
+.pesquisa {
+    width: 257px;
+    height: 40px;
+}
+
+.buscar {
+    border-right: none;
+}
+
+.search{
+    border-left: none;
+    background-color: #FFFfff;
+    border: 1px solid #ced4da;
+}
+
+.paginacao {
+    display: flex;
+    flex-direction: row;
+    
+}
+.paginacao span {
+    font-family: 'Circular Std';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+@media screen and (max-width: 615px){
+    .paginacao {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        padding: 15px;
+        width: 214px;
+        height: 210px;
+    
+    }
+    .texto {
+        width:500px ;
+        margin-right: -10px;
+        margin-top: 17px;
+    }
+}
+
+.imagem {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+.imagem img {
+    width: 98px;
+    height: 96px;
+    margin-top: 27px;
+}
+
+
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    margin-top: 17px;
+}
+
+.imagem span {
+    margin-left: 15px;
+   
+}
+
+
+
+
+
