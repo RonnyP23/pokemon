@@ -14,7 +14,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;500&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap" rel="stylesheet">
 
     <title>Teste Pratico</title>
 </head>
@@ -32,10 +34,11 @@
         </nav>
     </section>
     <section class="content">
+        
         <div class="topo">
-            <div class="conteudo-dir">
-                <span class="titulo" style="color: #000000;">Fase teste prático Front_end </span>
-                <span class="subtitulo" style="color: #000000;"> Subtitulo da descrição </span>
+            <div class="conteudo-esq">
+                <span class="titulo">Fase teste prático Front_end </span>
+                <span class="subtitulo">Lista de pokemon</span>
             </div>
             <div class="input-group flex-nowrap pesquisa">
                 <input type="text" ng-model="nomePokemon" class="form-control buscar" placeholder="Buscar" aria-label="Buscar"  ng-enter="buscar()" 
@@ -48,7 +51,7 @@
             </div>
         </div>
         <hr>
-        <span style="color:#000000;">Exibindo {{dados.limit}} de {{totalLista}} itens</span>
+        <span class="quant-itens">Exibindo {{dados.limit}} de {{totalLista}} itens</span>
         
         <div class="conteudo-pokemon" ng-repeat="p in listaPokemon">
             <div class="imagem">
@@ -80,7 +83,7 @@
 
     </section>
     <section class="paginacao">
-        <span>
+        <span class="pagina" >
             {{paginaInicial | number:0}} de {{paginaFinal | number:0}} páginas
         </span>
         <nav aria-label="Page navigation example">
